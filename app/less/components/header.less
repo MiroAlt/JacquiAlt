@@ -1,19 +1,22 @@
 .header {
+  padding-top: 8px;
+  position: relative;
 
-
-
+  @media @desktop {
+    padding-top: 48px;
+  }
 }
 
 .header-content {
   position: relative;
   background-color: #ccc;
   min-height: 180px;
-  margin: 50px 0 16px 0;
-  background: url("../img/bg-hp.jpg") center bottom / cover no-repeat;
+  margin: 24px 0 16px 0;
+  background: url("../img/bg-hp-lg-hd.jpg") center bottom / cover no-repeat;
 
   @media @tablet {
+    background-size: cover;
     min-height: 270px;
-    margin-top: 70px;
   }
 
   @media @desktop {
@@ -22,30 +25,29 @@
   }
 
   .logo {
-    position: absolute;
-    width: 60px;
-    height: 60px;
+    position: fixed;
+    width: 100px;
+    height: 100px;
     background-color: @body-background;
-    top: 0px;
-    padding: 0 8px 8px 8px;
-    left: 25px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    top: 8px;
+    padding: 8px;
+    right: 10%;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    z-index: 4;
+
 
 
     @media @tablet {
-      width: 100px;
-      height: 100px;
-      top: -25px;
-
+      border: medium double @dark;
     }
 
     @media @desktop {
-      width: 150px;
-      height: 150px;
-      top: -50px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      right: 40px;
+      top: -59px;
     }
   }
 }
@@ -60,8 +62,6 @@
   .flex-wrap(wrap);
   .justify-content(space-between);
   .align-items(center);
-
-
 
   @media @tablet {
     .flex-wrap(nowrap);
@@ -89,8 +89,8 @@
   .page-title {
     width: 100%;
     font-size: 5vw;
-
     margin: 0;
+    text-align: center;
 
     @media @tablet {
       width: auto;
@@ -104,7 +104,7 @@
     }
 
     @media @desktop {
-      .font-size(3.5);
+      .font-size(3);
 
     }
 

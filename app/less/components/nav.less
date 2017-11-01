@@ -2,24 +2,49 @@ a.menu-link {
   font-family: 'merriweather_light', serif;
   font-weight: normal;
   display: block;
-  margin: 0 auto;
   padding: 8px 16px;
   min-width: 100px;
   min-height: 40px;
   text-align: center;
   text-decoration: none;
   color: @dark;
-}
 
-.menu-text {
-
+  @media @desktop {
+    display: none;
+  }
 }
 
 nav[role="navigation"] {
+  position: relative;
   clear: both;
   transition: all 0.3s ease-out;
   overflow: hidden;
   max-height: 0;
+
+  @media @desktop {
+    max-height: none;
+    width: 100%;
+    border-top: 1px solid @dark;
+    border-bottom: 1px solid @dark;
+    position: absolute;
+    top: 16px;
+
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: @dark;
+    }
+    &:before {
+      top: 4px;
+    }
+    &:after {
+      bottom: 4px;
+    }
+  }
 
   &.active {
     padding-top: 20px;
@@ -29,11 +54,22 @@ nav[role="navigation"] {
   ul {
     margin: 0;
     padding: 0;
-    border-top: 1px solid #808080;
+    //border-top: 1px solid #808080;
+
+    @media @desktop {
+      .display-flex();
+      .justify-content(space-between);
+      .align-items(center);
+    }
 
     li {
 
+      @media @desktop {
+        display: inline-block;
+      }
+
       a {
+        position: relative;
         font-family: 'merriweather_black', serif;
         font-weight: normal;
         text-transform: uppercase;
@@ -43,17 +79,38 @@ nav[role="navigation"] {
         padding: 8px 16px;
         background-color: @body-background;
         color: black;
+        .font-size(1.4);
+        .transition(all,.2s,0s,linear);
 
+        @media @desktop {
+          padding: 40px 16px 8px 16px;
+          text-align: center;
+          border: 0;
+        }
 
         &:hover, &:focus {
           .icon {
             margin-right: 24px;
+            @media @desktop {
+              //top: 0;
+              //opacity: 1;
+              .scale(1.2);
+            }
           }
         }
 
         .icon {
           height: 36px;
           margin-right: 16px;
+          .transition(all,.2s, .1s,ease-out);
+
+          @media @desktop {
+            position: absolute;
+            //top: 34px;
+            top: 0;
+            left: 35%;
+            //opacity: 0;
+          }
 
           .svg-icon {
             position: relative;
@@ -69,30 +126,6 @@ nav[role="navigation"] {
 
 /* Responsive bit */
 
-@media screen and (min-width: 48.25em) {
-  a.menu-link {
-    display: none;
-  }
-  nav[role="navigation"] {
-    max-height: none;
-  }
-  nav[role="navigation"] ul {
-    margin: 0 0 0 -0.25em;
-    border: 0;
-  }
-
-  nav[role="navigation"]  li {
-    display: inline-block;
-    margin: 0 0.25em;
-  }
-  nav[role="navigation"] li a {
-    border: 0;
-  }
-}
-.content{
-  height: 600px;
-  background: whitesmoke;
-}
 
 /* MENU BURGER */
 .menu-link {

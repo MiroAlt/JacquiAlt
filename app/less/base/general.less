@@ -48,25 +48,19 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
+
+  @media @tablet {
     width: 750px;
   }
-}
-@media (min-width: 992px) {
-  .container {
+  @media @desktop {
     width: 970px;
   }
-}
-@media (min-width: 1200px) {
-  .container {
+  @media @widescreen {
     width: 1170px;
   }
 }
 
 section {
-
   @media @tablet {
     padding: 10*@unit 0;
   }
@@ -114,12 +108,29 @@ section {
 .hp-main {
   .display-flex();
   .flex-direction(column);
+  margin-top: 2px;
 
   @media @tablet {
     .flex-direction(row);
 
   }
 
+  /*MIDDLE*/
+  .section-middle {
+    border-left: medium double @dark;
+    border-right: medium double @dark;
+
+    @media @tablet {
+      width: 60%;
+    }
+  }
+
+  /*GENERIC*/
+  .section-left, .section-right {
+    padding: 16px;
+  }
+
+  /*LEFT*/
   .section-left {
 
     @media @tablet {
@@ -127,24 +138,242 @@ section {
     }
   }
 
-  .section-middle {
 
-
-    border-left: 4px solid @dark;
-    border-right: 4px solid @dark;
-
-    @media @tablet {
-      width: 60%;
-    }
-  }
-
+  /*RIGHT*/
   .section-right {
 
     @media @tablet {
       width: 20%;
       .order(-1);
     }
+
+
   }
 }
 
+
+.hp-links {
+  li {
+    margin-bottom: 16px;
+    a {
+      .display-flex();
+      .align-items(center);
+
+      svg, img {
+        width: 50px;
+        height: 50px;
+        margin-right: 16px;
+        filter: sepia; /* IE6-9 */
+        -webkit-filter: sepia(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+        filter: sepia(1); /* Microsoft Edge and Firefox 35+ */
+        fill: @dark
+      }
+      span {
+        font-family: @font-family-headings;
+      }
+    }
+  }
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-bordered {
+  padding: 4px;
+  border: 1px solid @dark;
+}
+
+.hand-link {
+  text-decoration: none;
+  .display-flex();
+  .align-items(center);
+
+  margin: 16px 0;
+
+  span {
+    margin-right: 8px;
+  }
+  svg {
+    .transition(all, .2s, 0s, ease-out);
+  }
+
+  &:hover, &:focus {
+    svg {
+
+      .translateX(8px);
+    }
+  }
+}
+
+
+hr.ski {
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+
+  &:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+  }
+}
+
+
+hr.paragraph {
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: medium double @dark;
+  color: @dark;
+  text-align: center;
+
+  &:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    background: @body-background;
+  }
+}
+
+
+
+
+.bt-1 {
+  border-top: 1px solid @dark;
+}
+.bt-2 {
+  border-top: 2px solid @dark;
+}
+.bb-1 {
+  border-bottom: 1px solid @dark;
+}
+.bb-2 {
+  border-bottom: 2px solid @dark;
+}
+
+.mb-sm {
+  margin-bottom: 8px;
+}
+.mb-md {
+  margin-bottom: 16px;
+}
+.mb-lg {
+  margin-bottom: 24px;
+}
+
+.pt-sm {
+  padding-top: 8px;
+}
+.pt-md {
+  padding-top: 16px;
+}
+.pt-lg {
+  padding-top: 24px;
+}
+
+
+/*Snow*/
+.snow-container {
+  position: absolute;
+  height: 350px;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+
+
+  .snow {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-animation: snow linear infinite;
+    animation: snow linear infinite;
+
+    &.foreground {
+      background-image: url("../../img/snow/foreground.png");
+      -webkit-animation-duration: 15s;
+      animation-duration: 15s;
+      opacity: 0.5;
+
+      &.layered {
+        -webkit-animation-delay: 7.5s;
+        animation-delay: 7.5s;
+      }
+    }
+
+    &.middleground {
+      background-image: url("../../img/snow/middleground.png");
+      -webkit-animation-duration: 20s;
+      animation-duration: 20s;
+
+      &.layered {
+        -webkit-animation-delay: 10s;
+        animation-delay: 10s;
+      }
+    }
+
+    &.background {
+      background-image: url("../../img/snow/background.png");
+      -webkit-animation-duration: 30s;
+      animation-duration: 30s;
+
+      &.layered {
+        .layered {
+          -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@-webkit-keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(15%, 100%, 0);
+    transform: translate3d(15%, 100%, 0);
+  }
+}
+
+@keyframes snow {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(15%, 100%, 0);
+    transform: translate3d(15%, 100%, 0);
+  }
+}
 

@@ -57,19 +57,52 @@ h4 {
   .font-size(1.3);
 }
 
+
+
 p {
-
-  margin-bottom: @unit;
-
   @media @desktop {
-    .font-size(1.8);
+    .font-size(1.6);
   }
 
   a {
     text-decoration: underline;
-
-    &:hover, &:focus {
-      color: red;
-    }
   };
+}
+
+.lead {
+  .font-size(1.6);
+  font-weight: bold;
+
+}
+
+a {
+  font-weight: bold;
+  background: -webkit-linear-gradient(@body-background, @body-background), -webkit-linear-gradient(@body-background, @body-background), -webkit-linear-gradient(@dark, @dark);
+  background: linear-gradient(@body-background, @body-background), linear-gradient(@body-background, @body-background), linear-gradient(@dark, @dark);
+  background-size: .05em 2px, .05em 2x, 2px 2px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 @body-background, -0.03em 0 @body-background, 0 0.03em @body-background, 0 -0.03em @body-background, 0.06em 0 @body-background, -0.06em 0 @body-background, 0.09em 0 @body-background, -0.09em 0 @body-background, 0.12em 0 @body-background, -0.12em 0 @body-background, 0.15em 0 @body-background, -0.15em 0 @body-background;
+  background-position: 0 90%, 100% 90%, 0 83%;
+  text-decoration: none;
+  color: @dark;
+  -webkit-transition: color .15s;
+  transition: color .15s;
+}
+a:hover, a:focus {
+  color: @dark;
+  background: transparent;
+  -webkit-transition: color .15s;
+  transition: color .15s;
+}
+a::-moz-selection {
+  background-image: none;
+  background-color: @dark;
+  color: @body-background;
+  text-shadow: none;
+}
+a::selection {
+  background-image: none;
+  background-color: @dark;
+  color: @body-background;
+  text-shadow: none;
 }
