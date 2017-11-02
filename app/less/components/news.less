@@ -12,14 +12,17 @@
     .display-flex();
     .flex-direction(column);
     padding: 0 24px;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
 
-
+    @media @tablet {
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+    }
 
 
     &:nth-child(2n+1) {
-      border-left: 1px solid @dark;
+      @media @tablet {
+        border-left: 1px solid @dark;
+      }
     }
 
 

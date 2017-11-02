@@ -117,11 +117,11 @@ section {
 
   /*MIDDLE*/
   .section-middle {
-    border-left: medium double @dark;
-    border-right: medium double @dark;
 
     @media @tablet {
       width: 60%;
+      border-left: medium double @dark;
+      border-right: medium double @dark;
     }
   }
 
@@ -149,6 +149,80 @@ section {
 
 
   }
+}
+
+
+/*articles*/
+.article{
+  max-width: 100%;
+  column-count: 2;
+  //column-width: 400px;
+  column-gap: 40px;
+  column-rule: 1px solid #404040;
+  margin: 40px 0;
+
+}
+.circle{
+  background: url(../../img/kozell.jpg) center center / cover no-repeat;;
+  width: 250px;
+  height: 250px;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 25%;
+  float: left;
+  margin: 0 40px 40px 0;
+  /*Shape outside - CSS Shapes level 1*/
+  shape-outside: circle();
+}
+
+.article-content{
+  padding: 16px 0 40px 0;
+  margin: 40px 0;
+
+  .image-block {
+    .display-flex();
+    padding: 40px 16px;
+
+    img {
+      width: 33%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  h3 {
+    font-family: @font-family-base;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 32px;
+  }
+
+  blockquote {
+    font-family: @font-family-base;
+    font-weight: normal;
+    position: relative;
+    border-top: medium double @dark;
+    border-bottom: medium double @dark;
+    margin: 40px 0;
+    padding: 16px 40px;
+
+    p {
+      .font-size(2.8);
+      &:before, &:after {
+        .font-size(3);
+      }
+    }
+  }
+
+  blockquote p:before{
+    content:'“';
+    margin-right: 8px;
+  }
+  blockquote p:after{
+    content:'”';
+    margin-left: 8px;
+  }
+
 }
 
 

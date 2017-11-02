@@ -8,11 +8,19 @@
 }
 
 .header-content {
+  &.bg-hp {
+    background: url("../img/bg-hp-lg-hd.jpg") center bottom / cover no-repeat;
+  }
+  &.bg-jasanky {
+    background: url("../img/bg-jasanky.jpg") center bottom / cover no-repeat;
+  }
+
+
   position: relative;
   background-color: #ccc;
   min-height: 180px;
   margin: 24px 0 16px 0;
-  background: url("../img/bg-hp-lg-hd.jpg") center bottom / cover no-repeat;
+
 
   @media @tablet {
     background-size: cover;
@@ -58,6 +66,7 @@
   padding: 8px 0;
   border-top: 2px solid @dark;
   border-bottom: 2px solid @dark;
+  margin-bottom: 4px;
   .display-flex();
   .flex-wrap(wrap);
   .justify-content(space-between);
@@ -78,11 +87,11 @@
   }
 
   &:before {
-    top: -4px;
+    top: -6px;
   }
 
   &:after {
-    bottom: -4px
+    bottom: -6px
   }
 
 
