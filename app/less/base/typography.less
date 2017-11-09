@@ -8,74 +8,94 @@ h1, h2, h3, h4, h5, h6 {
   @media @tablet {
     margin-bottom: 2*@unit;
   }
+
+  &.light {
+    font-family: 'merriweather_light', serif;
+    font-weight: normal;
+  }
+  &.modern {
+    font-family: 'theano_modernregular', serif;
+    font-weight: normal;
+  }
+
+  &.times {
+    font-family: 'Times', serif;
+    font-weight: normal;
+  }
 }
 
 h1 {
-  .font-size(3);
+  .font-size(30);
 
   @media @tablet {
-    .font-size(3.2);
+    .font-size(32);
   }
   @media @desktop {
-    .font-size(3.6)
+    .font-size(36)
   }
 }
 
 h2 {
-  .font-size(2.6);
+  .font-size(26);
 
   @media @tablet {
-    .font-size(2.8);
+    .font-size(28);
   }
   @media @desktop {
-    .font-size(3.2);
+    .font-size(32);
   }
 
 }
 
 h3 {
-  .font-size(2.2);
+  .font-size(22);
   @media @tablet {
-    .font-size(2.4);
+    .font-size(24);
   }
   @media @desktop {
-    .font-size(2.8);
+    .font-size(28);
   }
 }
 
 h4 {
-  .font-size(1.8);
+  .font-size(18);
   @media @tablet {
-    .font-size(2);
+    .font-size(20);
   }
   @media @desktop {
-    .font-size(2.4);
+    .font-size(24);
   }
+}
+
+h5 {
+  .font-size(18);
+  @media @tablet {
+    .font-size(19);
+  }
+  @media @desktop {
+    .font-size(20);
+  }
+}
+
+h6 {
+  .font-size(17);
 }
 
 .small {
-  .font-size(1.2);
+  .font-size(12);
   @media @tablet {
-    .font-size(1.4);
+    .font-size(14);
   }
 }
 
-
-
 p {
-  @media @desktop {
-    .font-size(1.6);
-  }
-
-  a {
-    text-decoration: underline;
-  };
+  margin-bottom: 16px;
 }
 
 .lead {
-  .font-size(1.6);
-  font-weight: bold;
-
+  font-family: @theanomodern-regular;
+  font-weight: normal;
+  .font-size(20);
 }
 
 a {
@@ -108,4 +128,31 @@ a::selection {
   background-color: @dark;
   color: @body-background;
   text-shadow: none;
+}
+
+
+blockquote {
+  font-family: @font-family-base;
+  font-weight: normal;
+  position: relative;
+  border-top: medium double @dark;
+  border-bottom: medium double @dark;
+  margin: 40px 0;
+  padding: 16px 40px;
+
+  p {
+    .font-size(28);
+    &:before, &:after {
+      .font-size(30);
+    }
+  }
+}
+
+blockquote p:before{
+  content:'“';
+  margin-right: 8px;
+}
+blockquote p:after{
+  content:'”';
+  margin-left: 8px;
 }

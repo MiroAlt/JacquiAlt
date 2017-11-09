@@ -16,8 +16,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 
-
-
+    <link rel="stylesheet" href="css/lightgallery.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <!--<script src="/assets/js/modernizr.js"></script>-->
@@ -41,13 +40,18 @@
     <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00"><!-- if entry is is time sensitive (e.g. news), pass this info through -->
     <meta property="article:section" content="Article Section"><!-- The section of your website to which the article belongs, such as 'Lifestyle' or 'Sports' -->
     <meta property="article:tag" content="Article Tag"><!-- An array of keywords relevant to the article -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,900" rel="stylesheet">
 
     <script src="js/plugin/jquery-3.2.1.min.js"></script>
     <!-- Core JS file -->
+    <!-- lightgallery plugins -->
+    <script src="js/plugin/lightgallery.min.js"></script>
+    <script src="js/plugin/lg-thumbnail.min.js"></script>
+    <script src="js/plugin/lg-fullscreen.min.js"></script>
+
 
     <!--<link rel="stylesheet" href="css/jquery.fancybox.min.css" />-->
     <script src="js/plugin/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="css/lightgallery.min.css">
 </head>
 <body>
 
@@ -157,21 +161,65 @@
         <div class="article">
             <div class="circle"></div>
             <div class="article-content">
-                <h2>Here is the article headline</h2>
-                <p>Bacon ipsum dolor amet bresaola alcatra beef turducken, short loin cupim chicken flank. Bacon short ribs pancetta sirloin leberkas rump porchetta meatball capicola salami pork belly flank. Brisket beef ribs bresaola leberkas burgdoggen. Bacon tail jerky, andouille tenderloin porchetta beef chicken burgdoggen pork ham hock shank drumstick kielbasa sirloin. Pastrami venison sausage meatloaf. Prosciutto shoulder turducken tri-tip ball tip boudin. Kevin ham hock biltong frankfurter, landjaeger meatloaf ball tip sausage boudin filet mignon tail swine jerky doner t-bone.</p>
+                <h2>Víte, že se lyže zvané „JASANKY“ stále vyrábějí?</h2>
+                <p class="lead">Lyže u nás nejdříve používali správci lesů a hajní. Hned poté se jejich používání rychle šířilo mezi ostatní lidi na horách. V Orlických horách byli lyže hlavně praktickým dopravním prostředkem během dlouhých zim. Jejich pohyb po horách v období zimy byl tak mnohem rychlejší a pohodlnější. </p>
+                <p>Lyže zvané „ski“ se <strong>vyráběli ze dřeva, nejlépe jasanového</strong> a měli řemínkové vázání. Odtud se nese jejich název „<strong>jasanky</strong>“, které se i v dnešní době stále vyrábějí v Orlických horách. Jízdu na lyžích udržoval „lyžník“ pomoci jediné hole, která sloužila jako opora při stoupání, zatáčení, brždění i zastavování. </p>
+                <p>V údolí Farského potoka nedaleko Dobrušky naleznete obec Dobré, kde bydlí pan <strong>Zdeněk Fryml, zvaný „Kozel“</strong>, který tyto krásné dobové ski – jasanky umí vyrobit. Umí toho podstatně více, kromě výroby jasanek, je to také výrobce holí, expedičních saní a renovátor skluznic. Toto řemeslo Kozel zdědil po svém dědovi, včetně nářadí, se kterým je vyráběl již v minulém století. </p>
 
-                <div class="image-block">
-                    <img src="http://www.placehold.it/200x200">
-                    <img src="http://www.placehold.it/200x200">
-                    <img src="http://www.placehold.it/200x200">
+
+                <div id="manufactureGallery" class="gallery">
+                    <div class="thumbnail-container">
+                        <img class="img-responsive" src="img/manufacture/vj-t01.jpg" />
+                    </div>
+                    <div class="thumbnail-container">
+                        <img class="img-responsive" src="img/manufacture/vj-t02.jpg" />
+                    </div>
+                    <div class="thumbnail-container">
+                        <img  class="img-responsive" src="img/manufacture/vj-t03.jpg" />
+                    </div>
                 </div>
 
-                <p>Bacon ipsum dolor amet bresaola alcatra beef turducken, short loin cupim chicken flank. Bacon short ribs pancetta sirloin leberkas rump porchetta meatball capicola salami pork belly flank. Brisket beef ribs bresaola leberkas burgdoggen. Bacon tail jerky, andouille tenderloin porchetta beef chicken burgdoggen pork ham hock shank drumstick kielbasa sirloin. Pastrami venison sausage meatloaf. Prosciutto shoulder turducken tri-tip ball tip boudin. Kevin ham hock biltong frankfurter, landjaeger meatloaf ball tip sausage boudin filet mignon tail swine jerky doner t-bone.</p>
-                <h3>Výroba Nansenových saní</h3>
-                <p>Bacon ipsum dolor amet bresaola alcatra beef turducken, short loin cupim chicken flank. Bacon short ribs pancetta sirloin leberkas rump porchetta meatball capicola salami pork belly flank. Brisket beef ribs bresaola leberkas burgdoggen. Bacon tail jerky, andouille tenderloin porchetta beef chicken burgdoggen pork ham hock shank drumstick kielbasa sirloin. Pastrami venison sausage meatloaf. Prosciutto shoulder turducken tri-tip ball tip boudin. Kevin ham hock biltong frankfurter, landjaeger meatloaf ball tip sausage boudin filet mignon tail swine jerky doner t-bone.</p>
-                <blockquote><p>Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.</p>
-                    ― Albert Einstein</blockquote>
-                <p>Bacon ipsum dolor amet bresaola alcatra beef turducken, short loin cupim chicken flank. Bacon short ribs pancetta sirloin leberkas rump porchetta meatball capicola salami pork belly flank. Brisket beef ribs bresaola leberkas burgdoggen. Bacon tail jerky, andouille tenderloin porchetta beef chicken burgdoggen pork ham hock shank drumstick kielbasa sirloin. Pastrami venison sausage meatloaf. Prosciutto shoulder turducken tri-tip ball tip boudin. Kevin ham hock biltong frankfurter, landjaeger meatloaf ball tip sausage boudin filet mignon tail swine jerky doner t-bone.</p>
+                <h2 class="light bb-2">Rozhovor</h2>
+
+                <h6 class="pt-md">Pane Frymle, dáváte spíše přednost oslovení „Kozel“ nebo je to přezdívka, kterou Vás mohou oslovovat pouze přátelé?</h6>
+                <p>Pod touto přezdívkou mě znají všichni a dokonce ji používám jako svou výrobní značku.</p>
+
+                <h6>Jestli to není tajné, mohu se zeptat, jak jste k takovéto přezdívce přišel?</h6>
+                <p>Tuto přezdívku jsem dostal už někdy ve druhé třídě, jako malý kluk. Možná to souviselo s tím, že jsem byl poněkud činorodější, než ostatní spolužáci.</p>
+
+
+                <h6>Můžete přiblížit čtenářům ještě něco z historie „jasanek“, nějaké důležité informace, které jsem zapomněla zmínit v úvodním článku?</h6>
+                <p>Určitě všechny zajímá, jak se Váš děda k tomuto řemeslu dostal a jak dlouho se tomuto řemeslu věnoval, můžete nám to prozradit?</p>
+                <p>Děda měl vlastní truhlářskou nábytkářskou dílnu a výroba lyží byla vlastně reakcí na poptávku. V té době bývaly v Orlických horách daleko tužší zimy a spousta lidí potřebovalo lyže ke každodenní práci, dopravě, možná někdy zřídka i k zábavě. Výroba lyží byla takovou sezónní prací mého dědy, kterou si přivydělával natolik, že mu stálo za to si nechat vyrobit speciální nástroje určené pouze na výrobu lyží. Dle dokumentů vyráběl cca 200párů ročně, což bylo v tu dobu poměrně velké množství.</p>
+
+                <h6>Jak dlouho se tomuto řemeslu věnujete Vy? Kdy jste převzal v rodině toto řemeslo?</h6>
+                <p>Řemeslo jsem zdědil už v genech po svém otci a dědovi. Jsem vyučený truhlář a během své pracovní kariéry jsem narazil i na výrobu lyží. Nejednalo se o žádnou zakázku ani jinou formu výdělku, ale šlo vyloženě o vlastní kratochvíli, potom co jsem objevil originál vyrobené lyže po dědovi a začal jsem na nich jezdit. Bylo mi líto tento historický kousek zničit a tak jsem se vrhl do výroby svých vlastních. Toho se chytili kamarádi, začalo se vyrábět více lyží, pak se začalo jezdit na závody včetně mistrovství světa a nakonec jsme začali s pořádáním největších historicko-lyžařských závodů u nás. Tím poptávka po nových jasankách rostla a rozjel se tím i vývoj a nové lehce upravené postupy.</p>
+
+                <h6>Je to spíše Váš koníček, nebo se tím dá uživit?</h6>
+                <p>Je to především můj koníček a spíše se výrobou historických replik lyží, saní a dalších dřevěných pomůcek a nástrojů bavím. Je to zpestření oproti všední každodenní práci.</p>
+
+                <h6>Je výroba jasanek složitá? Bylo by možné jednoduše shrnout, jak se vyrábí?</h6>
+                <p>Výroba lyží není pro zručného truhláře až tak složitá, jsou tam poměrně jednoduché postupy, ale když chcete vyrobit opravdu pěkný pár lyží, který něco vydrží, tak to hodně úsilí a zabere dost času. Jedná se o kusovou výrobu a ta je vždy časově náročná. Náročné je už získání kvalitního materiálu, kdy je potřeba si sám nechat nařezat dřevo tak aby mělo správně léta a pak musíte nějaký rok čekat než to uschne. Pak z toho nařezat podle předlohy polotovary lyží opracovat a jde se na ohýbání špiček lyží ve vroucí vodě. Tam se teprve ukáže, zda bude lyže dobrá či nikoliv. Pak následuje začištění a povrchová úprava, včetně napouštění skluznice.</p>
+
+                <h6>Kolik času zabere výroba jednoho páru?</h6>
+                <p>Vyrábím vždy minimálně dva páry naráz a od prvního říznutí do dokončení to zabere vždy minimálně tři dny, aby dodržel postupy. Po ohýbání lyží je totiž nutné alespoň den nechat dřevo zafixované.</p>
+
+                <blockquote><p>Je to především můj koníček a spíše se výrobou historických replik lyží, saní a dalších dřevěných pomůcek a nástrojů bavím. Je to zpestření oproti všední každodenní práci.</p>
+                    ― Zdeněk Fryml</blockquote>
+
+                <h6>Vyrábíte jasanky jako komplet včetně vázání?</h6>
+                <p>Vyrábím pouze lyže a dřevěné komponenty, vázání používáme staré původní a proto, jsme rádi za každé vázání, které nám někdo donese, nebo pošle. My jej zrenovujeme a může brázdit na nové lyži svahy v dalším tisíciletí.</p>
+
+                <h6>Je možné se na Vás obrátit a nechat si tyto lyže u Vás vyrobit a kdy je možné je osobně držet v ruce?</h6>
+                <p>Možné to samozřejmě je a vše je o domluvě o mé aktuální vytíženosti. Jak říkám, je to takový jeden z mích koníčků. Nejvíce lyží se vyrábí na podzim, aby se s nimi mohli noví majitelé zúčastnit našeho Mezinárního mistrovství ČR v historickém lyžování na Jurášce v Orlických horách.</p>
+                <hr class="paragraph">
+                <h4 class="pt-md">Kontakt</h4>
+                <address>
+                    <h5><strong>Zdeněk Fryml</strong></h5>
+                    <p><a href="tel:+420776328060">+420 776 328 060</a></p>
+                    <p><a href="mailto:kozel_z_hor@seznam.cz?Subject=Dotaz%20z%20Jasanky.com" target="_top" title="Otevře Vašeho email klienta">Napište Kozlovi email</a></p>
+                </address>
+
             </div>
         </div>
     </div>

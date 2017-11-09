@@ -34,10 +34,10 @@ td, th {
 }
 
 body {
-  font-family: 'theano_modernregular';
+  font-family: @times;
   background-color: @body-background;
   font-weight: normal;
-  .font-size(1.5);
+  .font-size(17);
   color: @dark;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -155,29 +155,38 @@ section {
 /*articles*/
 .article{
   max-width: 100%;
-  column-count: 2;
-  //column-width: 400px;
-  column-gap: 40px;
-  column-rule: 1px solid #404040;
   margin: 40px 0;
 
+  @media @tablet {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule: 1px solid #404040;
+  }
 }
 .circle{
-  background: url(../../img/kozell.jpg) center center / cover no-repeat;;
-  width: 250px;
-  height: 250px;
-  border-top-left-radius: 25%;
-  border-top-right-radius: 25%;
-  border-bottom-right-radius: 25%;
-  float: left;
+  background: url(../../img/kozel.jpg) top center / cover no-repeat;;
+  width: 100%;
+  height: 200px;
+
+
   margin: 0 40px 40px 0;
-  /*Shape outside - CSS Shapes level 1*/
-  shape-outside: circle();
+
+  @media @tablet {
+    background-origin: 50% 50%;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
+    width: 200px;
+    float: left;
+    shape-outside: circle();
+  }
+
 }
 
 .article-content{
   padding: 16px 0 40px 0;
   margin: 40px 0;
+
 
   .image-block {
     .display-flex();
@@ -197,32 +206,34 @@ section {
     margin-top: 32px;
   }
 
-  blockquote {
-    font-family: @font-family-base;
-    font-weight: normal;
-    position: relative;
-    border-top: medium double @dark;
-    border-bottom: medium double @dark;
-    margin: 40px 0;
-    padding: 16px 40px;
 
-    p {
-      .font-size(2.8);
-      &:before, &:after {
-        .font-size(3);
+
+}
+
+.gallery {
+  .display-flex();
+  .justify-content(space-between);
+  margin: 40px 0;
+
+  .thumbnail-container {
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    img {
+      .scale(1);
+      .transition(all,.2s,0s,ease-out);
+    }
+
+    &:hover, &:focus {
+      cursor: pointer;
+      img {
+        .scale(1.1);
       }
     }
   }
-
-  blockquote p:before{
-    content:'“';
-    margin-right: 8px;
-  }
-  blockquote p:after{
-    content:'”';
-    margin-left: 8px;
-  }
-
 }
 
 

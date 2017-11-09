@@ -109,11 +109,13 @@ th {
   text-align: left;
 }
 body {
-  font-family: 'theano_modernregular';
+  font-family: 'Times';
   background-color: #f5f2d5;
   font-weight: normal;
-  font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 17px;
+  line-height: 25.5px;
+  font-size: 1.7rem;
+  line-height: 2.55rem;
   color: #202020;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -230,22 +232,31 @@ body {
 /*articles*/
 .article {
   max-width: 100%;
-  column-count: 2;
-  column-gap: 40px;
-  column-rule: 1px solid #404040;
   margin: 40px 0;
 }
+@media only screen and (min-width: 769px) {
+  .article {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule: 1px solid #404040;
+  }
+}
 .circle {
-  background: url(../../img/kozell.jpg) center center / cover no-repeat;
-  width: 250px;
-  height: 250px;
-  border-top-left-radius: 25%;
-  border-top-right-radius: 25%;
-  border-bottom-right-radius: 25%;
-  float: left;
+  background: url(../../img/kozel.jpg) top center / cover no-repeat;
+  width: 100%;
+  height: 200px;
   margin: 0 40px 40px 0;
-  /*Shape outside - CSS Shapes level 1*/
-  shape-outside: circle();
+}
+@media only screen and (min-width: 769px) {
+  .circle {
+    background-origin: 50% 50%;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
+    width: 200px;
+    float: left;
+    shape-outside: circle();
+  }
 }
 .article-content {
   padding: 16px 0 40px 0;
@@ -270,31 +281,45 @@ body {
   text-transform: uppercase;
   margin-top: 32px;
 }
-.article-content blockquote {
-  font-family: 'theano_modernregular';
-  font-weight: normal;
-  position: relative;
-  border-top: medium double #202020;
-  border-bottom: medium double #202020;
+.gallery {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
   margin: 40px 0;
-  padding: 16px 40px;
 }
-.article-content blockquote p {
-  font-size: 28px;
-  font-size: 2.8rem;
+.gallery .thumbnail-container {
+  overflow: hidden;
 }
-.article-content blockquote p:before,
-.article-content blockquote p:after {
-  font-size: 30px;
-  font-size: 3rem;
-}
-.article-content blockquote p:before {
-  content: '“';
+.gallery .thumbnail-container:not(:last-child) {
   margin-right: 8px;
 }
-.article-content blockquote p:after {
-  content: '”';
-  margin-left: 8px;
+.gallery .thumbnail-container img {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.2s 0s ease-out;
+  -moz-transition: all 0.2s 0s ease-out;
+  -ms-transition: all 0.2s 0s ease-out;
+  transition: all 0.2s 0s ease-out;
+}
+.gallery .thumbnail-container:hover,
+.gallery .thumbnail-container:focus {
+  cursor: pointer;
+}
+.gallery .thumbnail-container:hover img,
+.gallery .thumbnail-container:focus img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .hp-links li {
   margin-bottom: 16px;
@@ -546,93 +571,173 @@ h6 {
     margin-bottom: 16px;
   }
 }
+h1.light,
+h2.light,
+h3.light,
+h4.light,
+h5.light,
+h6.light {
+  font-family: 'merriweather_light', serif;
+  font-weight: normal;
+}
+h1.modern,
+h2.modern,
+h3.modern,
+h4.modern,
+h5.modern,
+h6.modern {
+  font-family: 'theano_modernregular', serif;
+  font-weight: normal;
+}
+h1.times,
+h2.times,
+h3.times,
+h4.times,
+h5.times,
+h6.times {
+  font-family: 'Times', serif;
+  font-weight: normal;
+}
 h1 {
   font-size: 30px;
+  line-height: 45px;
   font-size: 3rem;
+  line-height: 4.5rem;
 }
 @media only screen and (min-width: 769px) {
   h1 {
     font-size: 32px;
+    line-height: 48px;
     font-size: 3.2rem;
+    line-height: 4.800000000000001rem;
   }
 }
 @media only screen and (min-width: 991px) {
   h1 {
     font-size: 36px;
+    line-height: 54px;
     font-size: 3.6rem;
+    line-height: 5.4rem;
   }
 }
 h2 {
   font-size: 26px;
+  line-height: 39px;
   font-size: 2.6rem;
+  line-height: 3.9000000000000004rem;
 }
 @media only screen and (min-width: 769px) {
   h2 {
     font-size: 28px;
+    line-height: 42px;
     font-size: 2.8rem;
+    line-height: 4.199999999999999rem;
   }
 }
 @media only screen and (min-width: 991px) {
   h2 {
     font-size: 32px;
+    line-height: 48px;
     font-size: 3.2rem;
+    line-height: 4.800000000000001rem;
   }
 }
 h3 {
   font-size: 22px;
+  line-height: 33px;
   font-size: 2.2rem;
+  line-height: 3.3000000000000003rem;
 }
 @media only screen and (min-width: 769px) {
   h3 {
     font-size: 24px;
+    line-height: 36px;
     font-size: 2.4rem;
+    line-height: 3.5999999999999996rem;
   }
 }
 @media only screen and (min-width: 991px) {
   h3 {
     font-size: 28px;
+    line-height: 42px;
     font-size: 2.8rem;
+    line-height: 4.199999999999999rem;
   }
 }
 h4 {
   font-size: 18px;
+  line-height: 27px;
   font-size: 1.8rem;
+  line-height: 2.7rem;
 }
 @media only screen and (min-width: 769px) {
   h4 {
     font-size: 20px;
+    line-height: 30px;
     font-size: 2rem;
+    line-height: 3rem;
   }
 }
 @media only screen and (min-width: 991px) {
   h4 {
     font-size: 24px;
+    line-height: 36px;
     font-size: 2.4rem;
+    line-height: 3.5999999999999996rem;
   }
+}
+h5 {
+  font-size: 18px;
+  line-height: 27px;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+@media only screen and (min-width: 769px) {
+  h5 {
+    font-size: 19px;
+    line-height: 28.5px;
+    font-size: 1.9rem;
+    line-height: 2.8499999999999996rem;
+  }
+}
+@media only screen and (min-width: 991px) {
+  h5 {
+    font-size: 20px;
+    line-height: 30px;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+h6 {
+  font-size: 17px;
+  line-height: 25.5px;
+  font-size: 1.7rem;
+  line-height: 2.55rem;
 }
 .small {
   font-size: 12px;
+  line-height: 18px;
   font-size: 1.2rem;
+  line-height: 1.7999999999999998rem;
 }
 @media only screen and (min-width: 769px) {
   .small {
     font-size: 14px;
+    line-height: 21px;
     font-size: 1.4rem;
+    line-height: 2.0999999999999996rem;
   }
 }
-@media only screen and (min-width: 991px) {
-  p {
-    font-size: 16px;
-    font-size: 1.6rem;
-  }
-}
-p a {
-  text-decoration: underline;
+p {
+  margin-bottom: 16px;
 }
 .lead {
-  font-size: 16px;
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-family: 'theano_modernregular';
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 a {
   font-weight: bold;
@@ -665,6 +770,36 @@ a::selection {
   background-color: #202020;
   color: #f5f2d5;
   text-shadow: none;
+}
+blockquote {
+  font-family: 'theano_modernregular';
+  font-weight: normal;
+  position: relative;
+  border-top: medium double #202020;
+  border-bottom: medium double #202020;
+  margin: 40px 0;
+  padding: 16px 40px;
+}
+blockquote p {
+  font-size: 28px;
+  line-height: 42px;
+  font-size: 2.8rem;
+  line-height: 4.199999999999999rem;
+}
+blockquote p:before,
+blockquote p:after {
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+}
+blockquote p:before {
+  content: '“';
+  margin-right: 8px;
+}
+blockquote p:after {
+  content: '”';
+  margin-left: 8px;
 }
 /* components */
 .header {
@@ -807,7 +942,9 @@ a::selection {
 @media only screen and (min-width: 991px) {
   .header-title .page-title {
     font-size: 30px;
+    line-height: 45px;
     font-size: 3rem;
+    line-height: 4.5rem;
   }
 }
 .header-title p {
@@ -949,7 +1086,9 @@ nav[role="navigation"] ul li a {
   background-color: #f5f2d5;
   color: black;
   font-size: 14px;
+  line-height: 21px;
   font-size: 1.4rem;
+  line-height: 2.0999999999999996rem;
   -webkit-transition: all 0.2s 0s linear;
   -moz-transition: all 0.2s 0s linear;
   -ms-transition: all 0.2s 0s linear;
