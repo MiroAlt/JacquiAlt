@@ -1,12 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="cs">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Front End Baseplate</title>
+    <title>Jacqueline Alt</title>
     <meta name="description" content="Page description (Max 155 characters)">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -15,13 +13,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
-
-
-
-    <link rel="stylesheet" href="css/lightgallery.min.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <!--<script src="/assets/js/modernizr.js"></script>-->
 
     <!-- twitter card data (https://dev.twitter.com/docs/cards, https://dev.twitter.com/docs/cards/large-image-summary-card) -->
     <meta name="twitter:card" content="summary_large_image">
@@ -42,297 +34,52 @@
     <meta property="article:modified_time" content="2013-09-16T19:08:47+01:00"><!-- if entry is is time sensitive (e.g. news), pass this info through -->
     <meta property="article:section" content="Article Section"><!-- The section of your website to which the article belongs, such as 'Lifestyle' or 'Sports' -->
     <meta property="article:tag" content="Article Tag"><!-- An array of keywords relevant to the article -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,900" rel="stylesheet">
 
-    <script src="js/plugin/jquery-3.2.1.min.js"></script>
-
-    <!-- lightgallery plugins -->
-    <script src="js/plugin/lightgallery.min.js"></script>
-    <script src="js/plugin/lg-thumbnail.min.js"></script>
-    <script src="js/plugin/lg-fullscreen.min.js"></script>
-
-    <!-- Core JS file -->
-
-    <!--<link rel="stylesheet" href="css/jquery.fancybox.min.css" />-->
-    <script src="js/plugin/jquery.fancybox.min.js"></script>
 </head>
 <body>
-
-<!--[if lte IE 9]>
-<div class="outdated-browser-wrapper">
-    <div class="outdated-browser">
-        You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/">upgrade your browser</a> to improve your viewing experience.
+    <!--[if lte IE 9]>
+    <div class="outdated-browser-wrapper">
+        <div class="outdated-browser">
+            You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/">upgrade your browser</a> to improve your viewing experience.
+        </div>
     </div>
-</div>
-<![endif]-->
+    <![endif]-->
 
-<div class="container">
-    <header class="header">
-
-        <a href="#menu" class="menu-link">
-            <span class="menu-icon">
-                <span class="line top"></span>
-                <span class="line middle"></span>
-                <span class="line bottom"></span>
-            </span>
-            <span class="menu-text">MENU</span>
-        </a>
-        <nav id="menu" role="navigation">
-            <ul>
-                <li>
-                    <a href="novinky.html">
-                        <span class="icon">
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#megaphone"></use>
-                            </svg>
-                        </span>
-                        Novinky
-                    </a>
-                </li>
-                <li>
-                    <a href="vysledky.html">
-                    <span class="icon">
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#scroll"></use>
-                            </svg>
-                        </span>
-                        Výsledky
-                    </a>
-                </li>
-                <li>
-                    <a href="fotogalerie.html">
-                        <span class="icon">
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#camera"></use>
-                            </svg>
-                        </span>
-                        Fotogalerie
-                    </a>
-                </li>
-                <li>
-                    <a href="historie-lyzovani.html">
-                        <span class="icon">
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#clock"></use>
-                            </svg>
-                        </span>
-                        Historie Lyžování
-                    </a>
-                </li>
-                <li>
-                    <a href="vyroba-jasanek.html">
-                        <span class="icon">
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#cross-ski"></use>
-                            </svg>
-                        </span>
-                        Výroba jasanek
-                    </a>
-                </li>
-                <li>
-                    <a href="kontakty.html">
-                        <span class="icon">
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#phone"></use>
-                            </svg>
-                        </span>
-                        Kontakty
-                    </a>
-                </li>
-            </ul>
+    <div class="nav">
+        <nav>
+            <a href="#section1">Link to section 1</a>
+            <a href="#section2">Link to section 2</a>
+            <a href="#section3">Link to section 3</a>
+            <a href="#section4">Link to section 4</a>
         </nav>
-
-
-        <div class="header-content bg-hp">
-            <a href="index.html"><img class="logo img-responsive" src="img/logo.png" alt="Jasanky logo"/></a>
-            <div class="snow-container">
-                <div class="snow foreground"></div>
-                <div class="snow foreground layered"></div>
-                <div class="snow middleground"></div>
-                <div class="snow middleground layered"></div>
-                <div class="snow background"></div>
-                <div class="snow background layered"></div>
-            </div>
-        </div>
-        <div class="header-title">
-            <h1 class="page-title">MM ČR v historickém lyžování</h1>
-            <p class="lp"><span>LP</span> &nbsp;2000</p>
-            <p class="fb">
-                <a href="https://www.facebook.com/Jasanky-Mezin%C3%A1rodn%C3%AD-M%C4%8CR-v-historick%C3%A9m-ly%C5%BEov%C3%A1n%C3%AD-1396907417099327/?ref=page_internal">
-                    <svg role="img" class="svg-icon">
-                        <use xlink:href="img/svg/svg-symbols.svg#facebook"></use>
-                    </svg>
-                </a>
-            </p>
-        </div>
-    </header>
-
-
-    <div class="hp-main">
-        <div class="section-middle">
-            <div class="banner">
-                <h2>Novinky</h2>
-
-            </div>
-
-            <div class="news">
-
-                <div class="news-item">
-                    <div class="item-content">
-                        <h3>MČR v České Televizi</h3>
-                        <p>Podívejte se na <a href="http://www.ceskatelevize.cz/ivysilani//10103510226-sport-v-regionech/217471290030004-mm-cr-v-historickem-lyzovani-olesnice-v-orlickych-horach/">reportáž České Televize</a> z posledního závodu, <a href="https://www.zonerama.com/PetrLinhart29/Album/2623007">fotogalerii Petra Linharta</a> a nebo si přečtěte <a href="https://rychnovsky.denik.cz/galerie/mezinarodni-mistrovstvi-cr-v-historickem-lyzovani-2017.html">článek v Rychnovském Deníku</a>.</p>
-                    </div>
-                    <div class="item-footer">
-                        <span class="date">26.01.2017</span>
-                        <a href="#">Více
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#hand"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="item-content">
-                        <h3>Výsledky MČR - Results 2017</h3>
-                        <p><a href="file/Soutěžní tabulka 2017 final.pdf">Výsledky</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <span class="date">23.01.2017</span>
-                        <a href="#">Více
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#hand"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="item-content">
-                        <h3>Výsledky MČR - Results 2017</h3>
-                        <p><a href="file/Soutěžní tabulka 2017 final.pdf">Výsledky</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <span class="date">23.01.2017</span>
-                        <a href="#">Více
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#hand"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="item-content">
-                        <h3>Výsledky MČR - Results 2017</h3>
-                        <p><a href="file/Soutěžní tabulka 2017 final.pdf">Výsledky</a></p>
-                    </div>
-                    <div class="item-footer">
-                        <span class="date">23.01.2017</span>
-                        <a href="#">Více
-                            <svg role="img" class="svg-icon">
-                                <use xlink:href="img/svg/svg-symbols.svg#hand"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-left">
-            <h4>Plakát 2017</h4>
-            <a class="fancybox" rel="group" href="img/posters/plakat_2017.jpg">
-                <img class="img-responsive img-bordered mb-md" src="img/posters/plakat_2017_preview.jpg" alt="Plakát pro rok 2017">
-            </a>
-            <p>Více plakatů můžete vidět na stránce LALALALALALA</p>
-            <p>
-                <a class="hand-link bt-1 mb-lg" href="#">
-                    <span>Více</span>
-                    <svg role="img" class="svg-icon">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/svg-symbols.svg#hand"></use>
-                    </svg>
-                </a>
-            </p>
-
-            <hr class="ski"/>
-
-            <h4 class="pt-md">Odkazy</h4>
-
-
-            <ul class="hp-links">
-                <li>
-                    <a href="http://www.hovrch.info/news.php">
-                        <img src="img/logo/logo-hovrch.png" width="50" height="50" alt="Hovrch"/>
-                        <span>HOVRCH</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://haffo.717.cz/">
-                        <svg role="img" class="svg-icon">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/svg-symbols.svg#hafo"></use>
-                        </svg>
-                        <span>HAFFO</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section-right">
-            <h4>Výroba jasanek</h4>
-            <a href="vyroba-jasanek.html"><img class="img-responsive img-bordered mb-md"  src="img/vyroba-jasanek.jpg" alt="Výroba jasanek"/></a>
-            <h5>Víte, že se lyže zvané „JASANKY“ stále vyrábějí?</h5>
-            <p>Lyže u nás nejdříve používali správci lesů a hajní. Hned poté se jejich používání rychle šířilo mezi ostatní lidi na horách. V Orlických horách byli lyže hlavně praktickým dopravním prostředkem během dlouhých zim. Jejich pohyb po horách v období zimy byl tak mnohem rychlejší a pohodlnější.</p>
-            <p>Lyže zvané „ski“ se vyráběli ze dřeva, nejlépe jasanového a ...</p>
-            <p>
-                <a class="hand-link bt-1 mb-lg pt-sm" href="vyroba-jasanek.html">
-                    <span>Více o výrobě</span>
-                    <svg role="img" class="svg-icon">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg/svg-symbols.svg#hand"></use>
-                    </svg>
-                </a>
-            </p>
-
-
-            <hr class="paragraph"/>
-
-            <h4 class="pt-md">Kontakt</h4>
-            <address>
-                <p class="lead">Michal Martínek</p>
-                Husova 300<br>
-                Nové Město nad Metují<br>
-                54901<br>
-                <p class="pt-md"><a href="tel:+420 607038490">+420 607 038490</a></p>
-                <p class="mb-lg"><a href="mailto:mcr@jasanky.com?Subject=Dotaz%20z%20Jasanky.com" target="_top">Napište nám</a></p>
-            </address>
-        </div>
+    </div>
+    <div class="container">
+        <section id="section1" class="section section--main">
+            <h1 class="main-heading">Jacqueline Alt</h1>
+            <p class="sub-heading">Maecenas volutpat blandit aliquam etiam. Nam at lectus urna duis convallis convallis. Consectetur lorem donec massa sapien. Vitae tortor condimentum lacinia quis vel. </p>
+            <!--<svg role="img" class="svg-icon">
+                <use xlink:href="img/svg/svg-symbols.svg#mouse"></use>
+            </svg>-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64">
+                <path id="mouse" d="M32 4c7.44 0 13.5 5.38 13.5 12v32c0 6.62-6.06 12-13.5 12s-13.5-5.38-13.5-12V16c0-6.62 6.06-12 13.5-12m0-4c-9.67 0-17.5 7.16-17.5 16v32c0 8.84 7.83 16 17.5 16s17.5-7.16 17.5-16V16c0-8.84-7.83-16-17.5-16z"/>
+                <path id="wheel" d="M32 14c1.08 0 2 .69 2 1.5v7c0 .81-.92 1.5-2 1.5s-2-.69-2-1.5v-7c0-.81.92-1.5 2-1.5m0-2c-2.21 0-4 1.57-4 3.5v7c0 1.93 1.79 3.5 4 3.5s4-1.57 4-3.5v-7c0-1.93-1.79-3.5-4-3.5z"/>
+            </svg>
+        </section>
+        <section id="section2" class="section">
+            <h2>Section 2 heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A erat nam at lectus urna duis convallis. Leo vel fringilla est ullamcorper eget. Risus in hendrerit gravida rutrum quisque non. A diam maecenas sed enim. Quis hendrerit dolor magna eget est. Elementum nibh tellus molestie nunc non blandit. Dui ut ornare lectus sit amet est placerat. Faucibus a pellentesque sit amet porttitor eget dolor morbi. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Sed augue lacus viverra vitae.</p>
+        </section>
+        <section id="section3" class="section">
+            <h2>Section 3 heading</h2>
+        </section>
+        <section id="section4" class="section">
+            <h2>Section 4 heading</h2>
+        </section>
     </div>
 
-    <div class="footer-title">
-        <h3>Přátelé a partneři MČR</h3>
-    </div>
-    <footer class="site-footer">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/logo/logo-art.png" alt="Art"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-bernard.png" alt="Pivovar Bernard"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-deva.png" alt="Deva"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-hovrch.png" alt="Hovrch"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-isover.png" alt="Isover"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-juraska.png" alt="Chata Juráška"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-kama.png" alt="Kama"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-kralik.png" alt="Králík"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-ohnostroje-nachod.png" alt="Ohňostroje Náchod"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-orlicky.png" alt="Orlický Deník"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-t.png" alt="Pneu T"/></div>
-                <div class="swiper-slide"><img src="img/logo/logo-warmpeace.png" alt="Warmapeace"/></div>
-            </div>
-        </div>
-    </footer>
-    <p class="small copyright">&copy; 2017 Michal Martínek | Design & Code @ Miro Alt</p>
-</div>
 
-<!-- Swiper JS -->
-<script src="js/plugin/swiper.min.js"></script>
-<script src="js/main.js"></script>
+
+
+    <script src="js/main.js"></script>
 </body>
 </html>

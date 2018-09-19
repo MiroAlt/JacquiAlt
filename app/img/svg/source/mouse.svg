@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px"
+	 height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g id="mouse">
+	<g>
+		<path d="M32,4c7.44,0,13.5,5.38,13.5,12v32c0,6.62-6.06,12-13.5,12c-7.44,0-13.5-5.38-13.5-12V16C18.5,9.38,24.56,4,32,4 M32,0
+			c-9.67,0-17.5,7.16-17.5,16v32c0,8.84,7.83,16,17.5,16s17.5-7.16,17.5-16V16C49.5,7.16,41.67,0,32,0L32,0z"/>
+	</g>
+</g>
+<g id="wheel">
+	<g>
+		<path d="M32,14c1.08,0,2,0.69,2,1.5v7c0,0.81-0.92,1.5-2,1.5s-2-0.69-2-1.5v-7C30,14.69,30.92,14,32,14 M32,12
+			c-2.21,0-4,1.57-4,3.5v7c0,1.93,1.79,3.5,4,3.5c2.21,0,4-1.57,4-3.5v-7C36,13.57,34.21,12,32,12L32,12z"/>
+	</g>
+</g>
+</svg>

@@ -50,7 +50,7 @@ gulp.task('img', function () {
 /*SVG sprites*/
 gulp.task('sprites', function () {
 
-    return gulp.src('app/img/svg/*.svg')
+    return gulp.src('app/img/svg/source/*.svg')
         .pipe(svgSymbols({
             svgClassname: 'svg-icon'
         }))
