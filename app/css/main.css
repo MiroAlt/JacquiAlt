@@ -1,0 +1,326 @@
+/* Media queries */
+/*
+USE
+@media @tablet {
+  footer {
+    width: 768px;
+  }
+}
+@media @desktop {
+  footer {
+    width: 940px;
+  }
+}
+*/
+/**
+	attach an opacity to any color (especially from @variable), after calling this mixin, use @resultAlphaColor as a result:
+	{
+	 	.alphaColor(@text-color, 0.2);
+		color: @resultAlphaColor;
+	}
+**/
+/**
+	cross browser simple linear gradient
+**/
+/* Gradient Mixin - https://webdesign.tutsplus.com/tutorials/making-gradients-easier-with-less-mixins--cms-24072  */
+/*
+As mentioned, we’re only required to specify the gradient type and the colors, for example:
+.gradient(linear; #2BC0E4, #EAECC6);
+Notice that each parameter should be separated with a ;. We use a comma to list colors and vendor prefixes.
+
+If you would like to customize the color stop you could write:
+.gradient(linear; #2BC0E4, #EAECC6 30%);
+
+Changing the gradient direction should be done with an angle value instead of its keyword counterpart:
+.gradient(linear; #2BC0E4, #EAECC6 30%; 180deg);
+
+The following is an example in which we create a radial gradient:
+.gradient(circle; #2BC0E4, #EAECC6);
+
+Generating a repeating gradient? No problemo:
+.gradient(repeating-linear; #085078, #2BC0E4 25px, #EAECC6 50px);
+In this case, make sure you adjust the background-size accordingly to see the desired result.
+*/
+/* Mini reset */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+@media only screen and (min-width: 769px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 16px;
+  }
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+body {
+  font-family: 'oswald', sans-serif;
+  background-color: #f1f3f5;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #515961;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  section {
+    padding: 80px 0;
+  }
+}
+h2 {
+  font-family: 'robotoslab', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 56px;
+  font-size: 5.6rem;
+  color: #87ABCF;
+}
+h3 {
+  font-family: 'exo-bold', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 36px;
+  font-size: 3.6rem;
+  color: #87ABCF;
+}
+p {
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 991px) {
+  p {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+p a {
+  color: #87ABCF;
+  text-decoration: underline;
+}
+p a:hover,
+p a:focus {
+  color: #515961;
+}
+.google-map iframe {
+  height: 300px;
+}
+@media only screen and (min-width: 769px) {
+  .google-map iframe {
+    height: 400px;
+  }
+}
+footer {
+  background-color: #87ABCF;
+  color: #f1f3f5;
+  padding: 24px 0 16px 0;
+}
+@media only screen and (min-width: 769px) {
+  footer {
+    padding: 40px 0 16px 0;
+  }
+}
+footer .contact {
+  border-bottom: 1px solid #f1f3f5;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 769px) {
+  footer .contact {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+}
+footer .contact address,
+footer .contact .phone,
+footer .contact .mail {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-align-items: center;
+  align-items: center;
+  font-size: 20px;
+  font-size: 2rem;
+  padding: 16px 0;
+}
+footer .contact address img,
+footer .contact .phone img,
+footer .contact .mail img {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+footer .contact .mail a,
+footer .contact .phone a {
+  text-decoration: none;
+  color: #f1f3f5;
+}
+#myBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+}
+.svg-icon {
+  width: 64px;
+  height: 64px;
+}
+@font-face {
+  font-family: 'exo-bold';
+  src: url('../../fonts/exo-bold.woff2') format('woff2'), url('../../fonts/exo-bold.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'exo-black';
+  src: url('../../fonts/exo-black.woff2') format('woff2'), url('../../fonts/exo-black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'fjallaone';
+  src: url('../../fonts/fjallaone.woff2') format('woff2'), url('../../fonts/fjallaone.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotoslab';
+  src: url('../../fonts/robotoslab.woff2') format('woff2'), url('../../fonts/robotoslab.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url('../../fonts/oswald.woff2') format('woff2'), url('../../fonts/oswald.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* components */
+/*Header styles*/
