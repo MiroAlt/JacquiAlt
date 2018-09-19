@@ -1,5 +1,5 @@
 {
-  "name": "chatamir",
+  "name": "Jacqueline Alt",
   "version": "1.0.0",
   "description": "Create folder\r get in terminal - navigate to folder and run",
   "main": "index.js",
@@ -34,10 +34,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MiroAlt/chataMir.git"
+    "url": "git+https://github.com/MiroAlt/JacquiAlt.git"
   },
   "bugs": {
-    "url": "https://github.com/MiroAlt/chataMir/issues"
+    "url": "https://github.com/MiroAlt/JacquiAlt/issues"
   },
-  "homepage": "https://github.com/MiroAlt/chataMir#readme"
+  "homepage": "https://github.com/MiroAlt/JacquiAlt#readme"
 }
