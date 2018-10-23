@@ -1,0 +1,174 @@
+.p-main {
+  background: #fff;
+  margin-top: 80px;
+  box-shadow: 0 0 16px rgba(0,0,0,.15);
+
+  margin-left: 20px;
+  margin-right: 20px;
+  @media only screen and (min-width: 1200px) {
+    padding-top: 160px;
+  }
+}
+
+/**
+* Slick slider
+*/
+@slider-side-padding: 56px;
+
+
+.slider {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+
+  @media only screen and (min-width: 1200px) {
+    padding: 0 @slider-side-padding;
+  }
+  /**
+  * responsive bit
+  */
+
+  &__motives {
+    display: block;
+
+
+    // responsive image
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 0 0 auto;
+    }
+  }
+
+  &__navigation {
+    //@animation-type: ease-in-out; //transition: all .5s 0s cubic-bezier(0,1,.8,.8);
+    position: relative; //important as we position main heading absolutely to th u ul
+    list-style: none;
+    margin: -40px 24px 0 0;
+    max-width: 525px;
+    background: #fff;
+    box-shadow: 0 0 16px rgba(0,0,0,.2);
+    padding: 0 0 0 24px;
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    z-index: 9999;
+    min-height: 380px;
+
+    @media only screen and (min-width: 1200px) {
+      position: absolute;
+      left: 0;
+      top: 15%;
+      margin-top: 0;
+      min-width: 47%;
+      height: 70%;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%; //get-height needed
+
+      /**
+      * slide black background on hover on links within not active li element
+      */
+      &:not(.active){
+        a {
+          transition: all .2s 0s linear;
+          &:hover {
+            color: #fff;
+
+            &:before {
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      /**
+      * Get rid of the small margin on the list item
+      */
+      &:last-child {
+        a {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        box-sizing: padding-box;
+        color: #000;
+        margin: 0 4px 0 0;
+        padding: 8px 40px 8px 0;
+        border-top: 2px solid #000;
+        transition: all .4s 0s linear;
+        min-width: 80px;
+        z-index: 0;
+
+
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          content:'';
+          width: 100%;
+          height: 0;
+          background: #000;
+          z-index: -1;
+          transition: height .4s 0s linear;
+        }
+      }
+
+      h2 {
+        display: block;
+        position: absolute;
+        opacity:0;
+        visibility: hidden;
+        margin: 0;
+        left: 0;
+        transform: translateX(40px);
+      }
+    }
+  }
+}
+
+/**
+* Active state
+*/
+li {
+  &.active {
+    width: 100%;
+
+    a {
+      max-width: 100%; //animating max width
+
+      &:hover {
+        cursor: default;
+      }
+
+      &:before {
+        opacity: 0;
+      }
+    }
+
+    h2 {
+      position: absolute;
+      top: 48px; //top indent within ul, leaving space for the links nav
+      left: 0;
+      padding: 24px;
+      flex: 1;
+      opacity:1;
+      visibility: visible;
+      transform: translateX(0);
+      transition: opacity .4s 0s ease, transform .4s 0s ease;
+    }
+  }
+}
+
+

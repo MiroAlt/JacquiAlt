@@ -331,6 +331,9 @@ var SlideNav = function () {
 }();
 
 
+
+var customNavLinks = $('.js_sliderNav li');
+
 window.slide = new SlideNav({
     activeClass: "active",
     toggleButtonSelector: false,
@@ -340,4 +343,38 @@ window.slide = new SlideNav({
     changeHash: false,
     navBoxToggleClass: false
 });
+
+$(window).on('load', function(){
+//Activate slider
+    $(document).ready(function(){
+        $('.js_slider').slick({
+            dots: false,
+            arrows: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            fade: true,
+            speed: 800,
+            //autoplay: true
+        });
+    });
+
+//Control slides on click within custom dot navigation
+    $('a').each(function(index){
+        $('a').on('click', function(e){
+            e.preventDefault();
+            console.log($(this).index);
+            customNavLinks.removeClass('active');
+            $(this).parents('li').addClass('active');
+            $('.js_slider').slick('slickGoTo', index + 1);
+        });
+    })
+
+});
+
+//Update custom navigation on slide change. This is to allow autoplay and slide events
+/*$(".js_slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    customNavLinks.removeClass('active');
+    customNavLinks.eq(currentSlide).addClass('active');
+});*/
     

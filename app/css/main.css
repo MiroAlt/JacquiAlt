@@ -367,3 +367,148 @@ p {
 .nav a:hover {
   background: rgba(255, 255, 255, 0.7);
 }
+.p-main {
+  background: #fff;
+  margin-top: 80px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media only screen and (min-width: 1200px) {
+  .p-main {
+    padding-top: 160px;
+  }
+}
+/**
+* Slick slider
+*/
+.slider {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+  /**
+  * responsive bit
+  */
+}
+@media only screen and (min-width: 1200px) {
+  .slider {
+    padding: 0 56px;
+  }
+}
+.slider__motives {
+  display: block;
+}
+.slider__motives img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 0 auto;
+}
+.slider__navigation {
+  position: relative;
+  list-style: none;
+  margin: -40px 24px 0 0;
+  max-width: 525px;
+  background: #fff;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  padding: 0 0 0 24px;
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  z-index: 9999;
+  min-height: 380px;
+}
+@media only screen and (min-width: 1200px) {
+  .slider__navigation {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    margin-top: 0;
+    min-width: 47%;
+    height: 70%;
+  }
+}
+.slider__navigation li {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  /**
+      * slide black background on hover on links within not active li element
+      */
+  /**
+      * Get rid of the small margin on the list item
+      */
+}
+.slider__navigation li:not(.active) a {
+  transition: all .2s 0s linear;
+}
+.slider__navigation li:not(.active) a:hover {
+  color: #fff;
+}
+.slider__navigation li:not(.active) a:hover:before {
+  height: 100%;
+}
+.slider__navigation li:last-child a {
+  margin-right: 0;
+}
+.slider__navigation li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  box-sizing: padding-box;
+  color: #000;
+  margin: 0 4px 0 0;
+  padding: 8px 40px 8px 0;
+  border-top: 2px solid #000;
+  transition: all .4s 0s linear;
+  min-width: 80px;
+  z-index: 0;
+}
+.slider__navigation li a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 0;
+  background: #000;
+  z-index: -1;
+  transition: height .4s 0s linear;
+}
+.slider__navigation li h2 {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  left: 0;
+  transform: translateX(40px);
+}
+/**
+* Active state
+*/
+li.active {
+  width: 100%;
+}
+li.active a {
+  max-width: 100%;
+}
+li.active a:hover {
+  cursor: default;
+}
+li.active a:before {
+  opacity: 0;
+}
+li.active h2 {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  padding: 24px;
+  flex: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: opacity .4s 0s ease, transform .4s 0s ease;
+}
